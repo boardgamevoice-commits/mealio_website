@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mealio — AI Cooking Assistant for iOS</title>
+    <meta name="description" content="Mealio is your private AI chef on iOS. Generate step-by-step recipes from photos or text, get real-time cooking guidance, and plan your weekly meals — all on-device, offline-ready.">
+    <meta property="og:title" content="Mealio — AI Cooking Assistant">
+    <meta property="og:description" content="Your private AI chef. Generate personalized recipes, get real-time cooking guidance with Gemini AI, and plan your weekly meals on iOS.">
+    <meta property="og:image" content="assets/hero.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- ============ HEADER ============ -->
+        <header>
+            <a href="index.html" class="logo">
+                <img src="assets/icon.png" alt="Mealio Logo">
+                <span>Mealio</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#safety">Safety</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="mailto:fangdev1063@gmail.com">Support</a></li>
+                    <li><a href="#download" class="nav-cta">Download</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- ============ HERO ============ -->
+        <section class="hero">
+            <div class="hero-content fade-in">
+                <span class="hero-badge">Powered by Gemini AI</span>
+                <h1>Your private<br><span class="highlight">AI chef,</span><br>always ready.</h1>
+                <p class="hero-subtitle">
+                    Mealio turns ingredients, photos, and cravings into step-by-step recipes instantly.
+                    With a multimodal Copilot that can see what you're cooking, perfect results are always one question away.
+                </p>
+                <div class="hero-btns">
+                    <a href="#download" class="btn-primary" id="hero-app-store-btn">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.1 1a5.1 5.1 0 0 1-1.2 3.5A4 4 0 0 1 11.7 6a4.6 4.6 0 0 1 1.2-3.4A4.9 4.9 0 0 1 16.1 1zm3.5 12.2c-.1.2-1.6 5.5-5.3 5.5a3.2 3.2 0 0 1-2-.7 3.5 3.5 0 0 0-2-.7 3.7 3.7 0 0 0-2.1.7 3 3 0 0 1-2 .7c-3.4 0-5-4.9-5-7.4a6.3 6.3 0 0 1 5.5-6.9 4 4 0 0 1 2.3.8 3.7 3.7 0 0 0 1.9.7 3.3 3.3 0 0 0 1.8-.7 4.3 4.3 0 0 1 2.3-.7 6 6 0 0 1 4.7 2.5A5.4 5.4 0 0 0 19.6 13.2z"/>
+                        </svg>
+                        Download on App Store
+                    </a>
+                    <a href="#features" class="btn-secondary" id="hero-features-btn">Explore features →</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-num">AI</span>
+                        <span class="stat-label">Gemini Powered</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-label">Local-First Data</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">3s</span>
+                        <span class="stat-label">Recipe in Seconds</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual fade-in fade-in-delay-2">
+                <img class="hero-img" src="assets/hero.png" alt="Mealio app showing an AI-generated recipe">
+            </div>
+        </section>
+
+        <!-- ============ FEATURES ============ -->
+        <section id="features">
+            <div class="section-header">
+                <span class="section-tag">Core Features</span>
+                <h2>Everything a great chef needs.</h2>
+                <p class="section-desc">From fridge-to-table in seconds. Mealio covers discovery, execution, and planning in one seamless loop.</p>
+            </div>
+
+            <div class="features-grid">
+
+                <!-- Featured card -->
+                <div class="feature-card featured">
+                    <div class="feature-icon">📸</div>
+                    <h3>Snap & Generate</h3>
+                    <p>
+                        Take a photo of your fridge or pantry and let Gemini AI identify your ingredients.
+                        Mealio then generates a full, structured recipe tailored to what you actually have —
+                        with prep, cook, and finish steps, heat cues, and safety notes baked in.
+                    </p>
+                    <span class="feature-tag">Multimodal AI</span>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>Copilot at Every Step</h3>
+                    <p>Stuck mid-cook? Ask the AI anything — by text, voice, or photo. The Copilot knows your current recipe and step.</p>
+                    <span class="feature-tag">Always Available</span>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🍳</div>
+                    <h3>Doneness Detection</h3>
+                    <p>Snap a photo of your pan and the AI will assess doneness, color, and readiness — with a mandatory safety reminder.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🗓️</div>
+                    <h3>Weekly Meal Planner</h3>
+                    <p>Plan breakfast, lunch, and dinner across the week. Switch between last week, this week, and next week. Copy or reset with a tap.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Personal Recipe Library</h3>
+                    <p>Every generated recipe is silently saved to your private, offline library. Search, filter, and re-cook any time — even without Wi-Fi.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Personalized Generation</h3>
+                    <p>Pre-inject dietary needs — low-fat, gluten-free, diabetic-friendly, high-protein — before every search for recipes that truly fit your life.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Nutrition Overview</h3>
+                    <p>A visual AI nutrition snapshot estimates calories and macros for your weekly plan, with a clear non-medical disclaimer.</p>
+                    <span class="feature-tag">Coming Soon</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============ HOW IT WORKS ============ -->
+        <section id="how-it-works">
+            <div class="section-header">
+                <span class="section-tag">Workflow</span>
+                <h2>From craving to plate in 4 steps.</h2>
+                <p class="section-desc">A cooking loop so smooth it feels natural, powered by structured AI and local-first data.</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">01</div>
+                    <span class="step-emoji">💬</span>
+                    <h3>Describe or Snap</h3>
+                    <p>Type a dish name with dietary needs, or photograph your available ingredients.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">02</div>
+                    <span class="step-emoji">✨</span>
+                    <h3>AI Generates</h3>
+                    <p>Gemini streams a structured recipe in under 3 seconds, covering prep, cook, and finish phases.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">03</div>
+                    <span class="step-emoji">🔥</span>
+                    <h3>Cook with Guidance</h3>
+                    <p>Follow the step-by-step guide. Ask questions or snap photos whenever you're unsure.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">04</div>
+                    <span class="step-emoji">📅</span>
+                    <h3>Plan & Repeat</h3>
+                    <p>Add your favourite meals to the weekly planner. Your library grows smarter with every cook.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SAFETY ============ -->
+        <section id="safety">
+            <div class="section-header">
+                <span class="section-tag">Safety & Privacy</span>
+                <h2>AI you can trust in the kitchen.</h2>
+                <p class="section-desc">Mealio is built with Safety-by-Design: every AI response prioritises your well-being over a pleasing answer.</p>
+            </div>
+
+            <div class="safety-grid">
+                <div class="safety-card">
+                    <div class="safety-icon">🌡️</div>
+                    <div>
+                        <h3>Doneness Safety Prompts</h3>
+                        <p>Recipes for poultry and pork always include internal temperature checkpoints and doneness cues. The AI will never skip food safety steps.</p>
+                    </div>
+                </div>
+                <div class="safety-card">
+                    <div class="safety-icon">📵</div>
+                    <div>
+                        <h3>Mandatory AI Disclaimers</h3>
+                        <p>Every visual doneness assessment includes a mandatory, non-dismissible safety reminder that AI cannot replace a meat thermometer.</p>
+                    </div>
+                </div>
+                <div class="safety-card">
+                    <div class="safety-icon">🔒</div>
+                    <div>
+                        <h3>Local-First Data</h3>
+                        <p>Your recipes and meal plans are stored exclusively on your device via CoreData. Nothing is uploaded to our servers. Photos are sent only to Gemini API, and only temporarily.</p>
+                    </div>
+                </div>
+                <div class="safety-card">
+                    <div class="safety-icon">🚫</div>
+                    <div>
+                        <h3>No AI Recipe Edits Without You</h3>
+                        <p>The Copilot can suggest changes, but it will never silently modify your recipe steps or ingredients. Every update requires your explicit confirmation.</p>
+                    </div>
+                </div>
+                <div class="safety-card">
+                    <div class="safety-icon">🩺</div>
+                    <div>
+                        <h3>Non-Medical Nutrition Data</h3>
+                        <p>Calorie and macro estimates are clearly labelled as approximations and are not medical advice. Mealio is a cooking tool, not a health app.</p>
+                    </div>
+                </div>
+                <div class="safety-card">
+                    <div class="safety-icon">⚠️</div>
+                    <div>
+                        <h3>High-Risk Ingredient Detection</h3>
+                        <p>Prompts for raw meat, unpasteurised dairy, wild game, or other high-risk foods are intercepted and replaced with safe preparation guidance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ DOWNLOAD / CTA ============ -->
+        <section id="download">
+            <div class="cta-card">
+                <span class="section-tag">Available on iOS</span>
+                <h2>Start cooking smarter<br><span class="highlight">today.</span></h2>
+                <p>Mealio is free to download. Generate your first AI recipe in under 60 seconds.</p>
+                <div class="cta-btns">
+                    <a href="#" class="btn-primary" id="cta-app-store-btn">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor">
+                            <path d="M16.1 1a5.1 5.1 0 0 1-1.2 3.5A4 4 0 0 1 11.7 6a4.6 4.6 0 0 1 1.2-3.4A4.9 4.9 0 0 1 16.1 1zm3.5 12.2c-.1.2-1.6 5.5-5.3 5.5a3.2 3.2 0 0 1-2-.7 3.5 3.5 0 0 0-2-.7 3.7 3.7 0 0 0-2.1.7 3 3 0 0 1-2 .7c-3.4 0-5-4.9-5-7.4a6.3 6.3 0 0 1 5.5-6.9 4 4 0 0 1 2.3.8 3.7 3.7 0 0 0 1.9.7 3.3 3.3 0 0 0 1.8-.7 4.3 4.3 0 0 1 2.3-.7 6 6 0 0 1 4.7 2.5A5.4 5.4 0 0 0 19.6 13.2z"/>
+                        </svg>
+                        App Store — Coming Soon
+                    </a>
+                    <a href="mailto:fangdev1063@gmail.com" class="btn-secondary" id="cta-contact-btn">Contact Support</a>
+                </div>
+                <p class="cta-note">Requires iOS 17.0 or later · iPhone only · Free to download</p>
+            </div>
+        </section>
+
+        <!-- ============ FOOTER ============ -->
+        <footer>
+            <div class="footer-inner">
+                <a href="index.html" class="footer-logo">
+                    <img src="assets/icon.png" alt="Mealio">
+                    <span>Mealio</span>
+                </a>
+                <ul class="footer-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Use</a></li>
+                    <li><a href="mailto:fangdev1063@gmail.com">Support</a></li>
+                </ul>
+                <p class="footer-copy">© 2026 Mealio. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div><!-- /container -->
+
+    <script>
+        // Animate on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.feature-card, .step-card, .safety-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
