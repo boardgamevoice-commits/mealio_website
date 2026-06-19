@@ -1,9 +1,9 @@
 # Weekly App Review - 2026-06-19
 
 ## Executive Summary
-This is the initial weekly review for the DishPilot landing page website (formerly Mealio). The repository is a clean, static landing page built with HTML, Vanilla CSS, and minimal Javascript for scroll animations. The design is premium, using the Outfit and Inter fonts with a curated dark-mode color palette and noise texture. Key policy pages (`privacy.html` and `terms.html`) are in place and Netlify configuration is active. 
+This is the initial weekly review for the DishPilot landing page website (formerly Mealio) and the DishPilot iOS application. The website repository is a clean, static landing page built with HTML, Vanilla CSS, and minimal Javascript for scroll animations. Key policy pages (`privacy.html` and `terms.html`) are in place and Netlify configuration is active. 
 
-This review successfully rebranded the website to align with the live App Store application ("DishPilot"), optimized page load performance (by ~90% reduction in asset sizes and parallel font loading), added CSP and HSTS security headers, and enhanced SEO metadata.
+This review successfully rebranded the website to align with the live App Store application ("DishPilot"), optimized page load performance (by ~90% reduction in asset sizes and parallel font loading), added CSP and HSTS security headers, and enhanced SEO metadata. Additionally, we initiated the release preparation for the iOS application, bumping its version to **1.0.1 (Build 2)** and drafting localized App Store update copy.
 
 ## Comparison with Previous Week (None)
 - **Previous Goals Met**:
@@ -11,15 +11,18 @@ This review successfully rebranded the website to align with the live App Store 
 - **Carried Over / Unresolved**:
   - *N/A*
 - **Key Differences & Progress**:
-  - Rebranded site and policy pages from Mealio to DishPilot.
-  - Linked download buttons directly to the live App Store page.
+  - Rebranded website and policy pages from Mealio to DishPilot.
+  - Linked website download buttons directly to the live App Store page.
   - Reduced icon size from 494 KB to 4.8 KB, and compressed hero image from 609 KB to 103 KB (JPEG format).
   - Configured CSP and HSTS headers in `netlify.toml`.
   - Moved Google Fonts imports to HTML `<head>` parallel-loading `<link>` tags.
+  - **iOS App**: Bumped app version to **1.0.1 (Build 2)** in Xcode (`project.pbxproj`) and verified changes in the local Git repository.
+  - **App Store Preparation**: Drafted multilingual App Store release notes (EN, ZH, ES).
 
 ## 1. App Metrics & Store Health
 - **App Status**: **Live on App Store** (Released June 11, 2026)
 - **App Name**: DishPilot (Bundle ID: `fangdev.Mealio`)
+- **App Version**: **1.0.1 (Build 2)** *(Prepared for Release)*
 - **App Store Rating**: 0 (No ratings yet)
 - **User Reviews**: 0 (No reviews yet)
 - **Supported Languages**: English, Simplified Chinese, Spanish (EN, ZH, ES)
@@ -55,5 +58,8 @@ No dependencies to update.
 - [x] **Priority 2**: Compress and optimize `assets/icon.png` and `assets/hero.png` (converted to `hero.jpg`) to reduce page weight by ~90%. (Done)
 - [x] **Priority 3**: Add CSP and HSTS headers to `netlify.toml` for improved security scores. (Done)
 - [x] **Priority 4**: Implement missing SEO tags on policy pages and point download links directly to the live App Store page. (Done)
-- [ ] **Priority 5**: Monitor page speed metrics and SEO performance post-deployment.
-- [ ] **Priority 6**: Track App Store click-through metrics on the new landing page.
+- [x] **Priority 5**: Bump iOS App Version to **1.0.1 (Build 2)** and commit changes to local Git. (Done)
+- [x] **Priority 6**: Prepare multilingual App Store update release text. (Done)
+- [ ] **Priority 7**: Monitor page speed metrics and SEO performance post-deployment of the landing page.
+- [ ] **Priority 8**: Submit DishPilot Version 1.0.1 to the App Store Connect and monitor approval status.
+- [ ] **Priority 9**: Perform a comprehensive code review of core iOS app modules in the next weekly cycle.
