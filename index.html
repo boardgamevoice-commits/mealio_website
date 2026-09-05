@@ -3,270 +3,632 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DishPilot — AI Cooking Assistant for iOS</title>
-    <meta name="description" content="DishPilot is your private AI chef on iOS. Generate step-by-step recipes from photos or text, get real-time cooking guidance, and plan your weekly meals — all on-device, offline-ready.">
-    <meta property="og:title" content="DishPilot — AI Cooking Assistant">
-    <meta property="og:description" content="Your private AI chef. Generate personalized recipes, get real-time cooking guidance with Gemini AI, and plan your weekly meals on iOS.">
-    <meta property="og:image" content="assets/hero.jpg">
+    <title>Mealio — AI Smart Kitchen &amp; Cooking Companion</title>
+    <meta name="description" content="Mealio is your private AI chef on iOS. Generate personalized recipes with Gemini 3.5 Flash, cook with interactive direct-manipulation guidance, and plan your weekly meals — 100% local-first.">
+    <meta property="og:title" content="Mealio — AI Smart Kitchen &amp; Cooking Companion">
+    <meta property="og:description" content="Transform fridge ingredients into delicious meals with Gemini 3.5 Flash. Interactive cooking mode, multimodal Copilot, 3-week meal planning, and on-device privacy.">
+    <meta property="og:image" content="assets/app-preview.png">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Apple Native Ecosystem & Web Clip Integration -->
+    <meta name="apple-itunes-app" content="app-id=6777829320">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icon.png">
+    <meta name="apple-mobile-web-app-title" content="Mealio">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0F0A06">
+
     <link rel="icon" type="image/png" href="assets/icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+
+    <!-- Schema.org SoftwareApplication & FAQPage Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "Mealio",
+          "operatingSystem": "iOS 17.0 or later",
+          "applicationCategory": "FoodAndDrinkApplication",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "downloadUrl": "https://apps.apple.com/app/mealio/id6777829320",
+          "description": "Mealio is your private AI chef on iOS. Generate personalized recipes with Gemini 3.5 Flash, cook with interactive direct-manipulation guidance, and plan your weekly meals — 100% local-first."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is Mealio free to use? Do I need a recurring subscription?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Mealio is completely free to download. Every user receives complimentary daily recipe generations and vision checks. If you need extra generation credits on the same day, you can voluntarily watch an opt-in rewarded video — zero forced paywalls or mandatory subscriptions."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need to create an account or provide personal info?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No! Mealio operates with a strict zero-registration, zero-login architecture. All your saved recipes, customized tags, and meal planning schedules are stored directly on your iPhone using CoreData."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does Mealio protect my photo library privacy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Mealio uses Apple's native, out-of-process PhotosPicker (iOS 16+). The app never requests full photo library access and never triggers a permission prompt on launch. Only the exact photo you deliberately pick is processed."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Mealio work offline in the kitchen?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes! All recipes in your personal library and all scheduled meals across the 3-week planner are saved locally on your device and can be viewed and cooked completely offline without internet."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does the AI Copilot help me cook safely?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The AI Copilot provides real-time culinary Q&A, ingredient substitution tips, and visual doneness checks. Following food safety principles, it includes non-dismissible disclaimers reminding users to verify internal temperatures for poultry and pork with a meat thermometer."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <div class="container">
 
         <!-- ============ HEADER ============ -->
         <header>
             <a href="index.html" class="logo">
-                <img src="assets/icon.png" alt="DishPilot Logo">
-                <span>DishPilot</span>
+                <img src="assets/icon.png" alt="Mealio Logo" width="40" height="40">
+                <span>Mealio</span>
             </a>
-            <nav>
+            <nav aria-label="Main Navigation">
                 <ul>
+                    <li><a href="#showcase">Experience</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#how-it-works">How It Works</a></li>
                     <li><a href="#safety">Safety</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                     <li><a href="privacy.html">Privacy</a></li>
-                    <li><a href="mailto:fangdev1063@gmail.com">Support</a></li>
                     <li><a href="#download" class="nav-cta">Download</a></li>
                 </ul>
             </nav>
         </header>
 
         <!-- ============ HERO ============ -->
-        <section class="hero">
-            <div class="hero-content fade-in">
-                <span class="hero-badge">Powered by Gemini AI</span>
-                <h1>Your private<br><span class="highlight">AI chef,</span><br>always ready.</h1>
-                <p class="hero-subtitle">
-                    DishPilot turns ingredients, photos, and cravings into step-by-step recipes instantly.
-                    With a multimodal Copilot that can see what you're cooking, perfect results are always one question away.
-                </p>
-                <div class="hero-btns">
-                    <a href="https://apps.apple.com/app/dishpilot/id6777829320" target="_blank" rel="noopener" class="btn-primary" id="hero-app-store-btn">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.1 1a5.1 5.1 0 0 1-1.2 3.5A4 4 0 0 1 11.7 6a4.6 4.6 0 0 1 1.2-3.4A4.9 4.9 0 0 1 16.1 1zm3.5 12.2c-.1.2-1.6 5.5-5.3 5.5a3.2 3.2 0 0 1-2-.7 3.5 3.5 0 0 0-2-.7 3.7 3.7 0 0 0-2.1.7 3 3 0 0 1-2 .7c-3.4 0-5-4.9-5-7.4a6.3 6.3 0 0 1 5.5-6.9 4 4 0 0 1 2.3.8 3.7 3.7 0 0 0 1.9.7 3.3 3.3 0 0 0 1.8-.7 4.3 4.3 0 0 1 2.3-.7 6 6 0 0 1 4.7 2.5A5.4 5.4 0 0 0 19.6 13.2z"/>
-                        </svg>
-                        Download on App Store
-                    </a>
-                    <a href="#features" class="btn-secondary" id="hero-features-btn">Explore features →</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-num">AI</span>
-                        <span class="stat-label">Gemini Powered</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-num">100%</span>
-                        <span class="stat-label">Local-First Data</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-num">3s</span>
-                        <span class="stat-label">Recipe in Seconds</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-visual fade-in fade-in-delay-2">
-                <img class="hero-img" src="assets/hero.jpg" alt="DishPilot app showing an AI-generated recipe">
-            </div>
-        </section>
-
-        <!-- ============ FEATURES ============ -->
-        <section id="features">
-            <div class="section-header">
-                <span class="section-tag">Core Features</span>
-                <h2>Everything a great chef needs.</h2>
-                <p class="section-desc">From fridge-to-table in seconds. DishPilot covers discovery, execution, and planning in one seamless loop.</p>
-            </div>
-
-            <div class="features-grid">
-
-                <!-- Featured card -->
-                <div class="feature-card featured">
-                    <div class="feature-icon">📸</div>
-                    <h3>Snap & Generate</h3>
-                    <p>
-                        Take a photo of your fridge or pantry and let Gemini AI identify your ingredients.
-                        DishPilot then generates a full, structured recipe tailored to what you actually have —
-                        with prep, cook, and finish steps, heat cues, and safety notes baked in.
+        <main id="main-content">
+            <section class="hero">
+                <div class="hero-content fade-in">
+                    <span class="hero-badge">Powered by Gemini 3.5 Flash</span>
+                    <h1>Your private<br><span class="highlight">AI chef,</span><br>always ready.</h1>
+                    <p class="hero-subtitle">
+                        Mealio transforms fridge ingredients, cravings, and pantry staples into structured, step-by-step recipes in under 3 seconds.
+                        Featuring an ergonomic direct-manipulation cooking mode, multimodal visual Copilot, and 3-week smart meal planning — completely private and local-first.
                     </p>
-                    <span class="feature-tag">Multimodal AI</span>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3>Copilot at Every Step</h3>
-                    <p>Stuck mid-cook? Ask the AI anything — by text, voice, or photo. The Copilot knows your current recipe and step.</p>
-                    <span class="feature-tag">Always Available</span>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🍳</div>
-                    <h3>Doneness Detection</h3>
-                    <p>Snap a photo of your pan and the AI will assess doneness, color, and readiness — with a mandatory safety reminder.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🗓️</div>
-                    <h3>Weekly Meal Planner</h3>
-                    <p>Plan breakfast, lunch, and dinner across the week. Switch between last week, this week, and next week. Copy or reset with a tap.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📚</div>
-                    <h3>Personal Recipe Library</h3>
-                    <p>Every generated recipe is silently saved to your private, offline library. Search, filter, and re-cook any time — even without Wi-Fi.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Personalized Generation</h3>
-                    <p>Pre-inject dietary needs — low-fat, gluten-free, diabetic-friendly, high-protein — before every search for recipes that truly fit your life.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Nutrition Overview</h3>
-                    <p>A visual AI nutrition snapshot estimates calories and macros for your weekly plan, with a clear non-medical disclaimer.</p>
-                    <span class="feature-tag">Coming Soon</span>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ============ HOW IT WORKS ============ -->
-        <section id="how-it-works">
-            <div class="section-header">
-                <span class="section-tag">Workflow</span>
-                <h2>From craving to plate in 4 steps.</h2>
-                <p class="section-desc">A cooking loop so smooth it feels natural, powered by structured AI and local-first data.</p>
-            </div>
-
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-num">01</div>
-                    <span class="step-emoji">💬</span>
-                    <h3>Describe or Snap</h3>
-                    <p>Type a dish name with dietary needs, or photograph your available ingredients.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">02</div>
-                    <span class="step-emoji">✨</span>
-                    <h3>AI Generates</h3>
-                    <p>Gemini streams a structured recipe in under 3 seconds, covering prep, cook, and finish phases.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">03</div>
-                    <span class="step-emoji">🔥</span>
-                    <h3>Cook with Guidance</h3>
-                    <p>Follow the step-by-step guide. Ask questions or snap photos whenever you're unsure.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">04</div>
-                    <span class="step-emoji">📅</span>
-                    <h3>Plan & Repeat</h3>
-                    <p>Add your favourite meals to the weekly planner. Your library grows smarter with every cook.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============ SAFETY ============ -->
-        <section id="safety">
-            <div class="section-header">
-                <span class="section-tag">Safety & Privacy</span>
-                <h2>AI you can trust in the kitchen.</h2>
-                <p class="section-desc">DishPilot is built with Safety-by-Design: every AI response prioritises your well-being over a pleasing answer.</p>
-            </div>
-
-            <div class="safety-grid">
-                <div class="safety-card">
-                    <div class="safety-icon">🌡️</div>
-                    <div>
-                        <h3>Doneness Safety Prompts</h3>
-                        <p>Recipes for poultry and pork always include internal temperature checkpoints and doneness cues. The AI will never skip food safety steps.</p>
+                    <div class="hero-btns">
+                        <a href="https://apps.apple.com/app/mealio/id6777829320" target="_blank" rel="noopener" class="btn-primary" id="hero-app-store-btn">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor" aria-hidden="true">
+                                <path d="M16.1 1a5.1 5.1 0 0 1-1.2 3.5A4 4 0 0 1 11.7 6a4.6 4.6 0 0 1 1.2-3.4A4.9 4.9 0 0 1 16.1 1zm3.5 12.2c-.1.2-1.6 5.5-5.3 5.5a3.2 3.2 0 0 1-2-.7 3.5 3.5 0 0 0-2-.7 3.7 3.7 0 0 0-2.1.7 3 3 0 0 1-2 .7c-3.4 0-5-4.9-5-7.4a6.3 6.3 0 0 1 5.5-6.9 4 4 0 0 1 2.3.8 3.7 3.7 0 0 0 1.9.7 3.3 3.3 0 0 0 1.8-.7 4.3 4.3 0 0 1 2.3-.7 6 6 0 0 1 4.7 2.5A5.4 5.4 0 0 0 19.6 13.2z"/>
+                            </svg>
+                            Download on App Store
+                        </a>
+                        <a href="#showcase" class="btn-secondary" id="hero-features-btn">See it in action ↓</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-num">3.5 Flash</span>
+                            <span class="stat-label">Multimodal AI</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num">100%</span>
+                            <span class="stat-label">Local-First Data</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num">&lt; 3s</span>
+                            <span class="stat-label">Streaming Recipe</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num">0 Login</span>
+                            <span class="stat-label">Total Privacy</span>
+                        </div>
                     </div>
                 </div>
-                <div class="safety-card">
-                    <div class="safety-icon">📵</div>
-                    <div>
-                        <h3>Mandatory AI Disclaimers</h3>
-                        <p>Every visual doneness assessment includes a mandatory, non-dismissible safety reminder that AI cannot replace a meat thermometer.</p>
+                <div class="hero-visual fade-in fade-in-delay-2">
+                    <div class="mockup-wrapper">
+                        <div class="floating-pill pill-top-left">
+                            <span>⚡</span> Gemini 3.5 Flash Streaming
+                        </div>
+                        <div class="phone-mockup">
+                            <img src="assets/app-preview.png" alt="Mealio iOS Discovery Screen Preview" width="800" height="1738" decoding="async">
+                        </div>
+                        <div class="floating-pill pill-bottom-right">
+                            <span>🥗</span> AI Macro &amp; Calorie Insights
+                        </div>
                     </div>
                 </div>
-                <div class="safety-card">
-                    <div class="safety-icon">🔒</div>
-                    <div>
-                        <h3>Local-First Data</h3>
-                        <p>Your recipes and meal plans are stored exclusively on your device via CoreData. Nothing is uploaded to our servers. Photos are sent only to Gemini API, and only temporarily.</p>
-                    </div>
-                </div>
-                <div class="safety-card">
-                    <div class="safety-icon">🚫</div>
-                    <div>
-                        <h3>No AI Recipe Edits Without You</h3>
-                        <p>The Copilot can suggest changes, but it will never silently modify your recipe steps or ingredients. Every update requires your explicit confirmation.</p>
-                    </div>
-                </div>
-                <div class="safety-card">
-                    <div class="safety-icon">🩺</div>
-                    <div>
-                        <h3>Non-Medical Nutrition Data</h3>
-                        <p>Calorie and macro estimates are clearly labelled as approximations and are not medical advice. DishPilot is a cooking tool, not a health app.</p>
-                    </div>
-                </div>
-                <div class="safety-card">
-                    <div class="safety-icon">⚠️</div>
-                    <div>
-                        <h3>High-Risk Ingredient Detection</h3>
-                        <p>Prompts for raw meat, unpasteurised dairy, wild game, or other high-risk foods are intercepted and replaced with safe preparation guidance.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- ============ DOWNLOAD / CTA ============ -->
-        <section id="download">
-            <div class="cta-card">
-                <span class="section-tag">Available on iOS</span>
-                <h2>Start cooking smarter<br><span class="highlight">today.</span></h2>
-                <p>DishPilot is free to download. Generate your first AI recipe in under 60 seconds.</p>
-                <div class="cta-btns">
-                    <a href="https://apps.apple.com/app/dishpilot/id6777829320" target="_blank" rel="noopener" class="btn-primary" id="cta-app-store-btn">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor">
-                            <path d="M16.1 1a5.1 5.1 0 0 1-1.2 3.5A4 4 0 0 1 11.7 6a4.6 4.6 0 0 1 1.2-3.4A4.9 4.9 0 0 1 16.1 1zm3.5 12.2c-.1.2-1.6 5.5-5.3 5.5a3.2 3.2 0 0 1-2-.7 3.5 3.5 0 0 0-2-.7 3.7 3.7 0 0 0-2.1.7 3 3 0 0 1-2 .7c-3.4 0-5-4.9-5-7.4a6.3 6.3 0 0 1 5.5-6.9 4 4 0 0 1 2.3.8 3.7 3.7 0 0 0 1.9.7 3.3 3.3 0 0 0 1.8-.7 4.3 4.3 0 0 1 2.3-.7 6 6 0 0 1 4.7 2.5A5.4 5.4 0 0 0 19.6 13.2z"/>
-                        </svg>
-                        Download on App Store
-                    </a>
-                    <a href="mailto:fangdev1063@gmail.com" class="btn-secondary" id="cta-contact-btn">Contact Support</a>
+            <!-- ============ INTERACTIVE SHOWCASE ============ -->
+            <section id="showcase" class="showcase-section">
+                <div class="section-header">
+                    <span class="section-tag">Interactive Tour</span>
+                    <h2>Engineered for real kitchens.</h2>
+                    <p class="section-desc">Experience how Mealio’s native iOS architecture streamlines cooking from first craving to final bite.</p>
                 </div>
-                <p class="cta-note">Requires iOS 17.0 or later · iPhone only · Free to download</p>
-            </div>
-        </section>
+
+                <div class="showcase-nav" role="tablist">
+                    <button class="showcase-tab active" role="tab" aria-selected="true" aria-controls="panel-discovery" id="tab-discovery">
+                        <span>📸</span> Fridge-to-Table
+                    </button>
+                    <button class="showcase-tab" role="tab" aria-selected="false" aria-controls="panel-cooking" id="tab-cooking">
+                        <span>⚡</span> Direct Manipulation
+                    </button>
+                    <button class="showcase-tab" role="tab" aria-selected="false" aria-controls="panel-copilot" id="tab-copilot">
+                        <span>🤖</span> Multimodal Copilot
+                    </button>
+                    <button class="showcase-tab" role="tab" aria-selected="false" aria-controls="panel-planner" id="tab-planner">
+                        <span>🗓️</span> 3-Week Planning
+                    </button>
+                    <button class="showcase-tab" role="tab" aria-selected="false" aria-controls="panel-nutrition" id="tab-nutrition">
+                        <span>📊</span> Nutrition Insights
+                    </button>
+                </div>
+
+                <div class="showcase-content-wrapper">
+                    <!-- Panel 1: Discovery -->
+                    <div class="showcase-panel active" id="panel-discovery" role="tabpanel" aria-labelledby="tab-discovery">
+                        <div>
+                            <span class="showcase-badge-pill">Gemini 3.5 Flash Multimodal</span>
+                            <h3>Snap what's in your fridge. We handle the rest.</h3>
+                            <p>
+                                Pick photos directly from your camera roll or describe what you have. Gemini 3.5 Flash extracts recognized ingredients with confidence scoring, lets you confirm tags, and streams tailored recipes in seconds — complete with prep and cooking timelines.
+                            </p>
+                            <ul class="showcase-highlights">
+                                <li><span class="check">✓</span> Out-of-process PhotosPicker with zero permission popups</li>
+                                <li><span class="check">✓</span> Background recipe generation keeps the app responsive</li>
+                                <li><span class="check">✓</span> Robust dual-stage JSON parser prevents broken recipes</li>
+                            </ul>
+                        </div>
+                        <div class="showcase-visual">
+                            <div style="font-size: 3.5rem; margin-bottom: 0.5rem;">🥗</div>
+                            <div style="font-weight: 800; font-size: 1.15rem; margin-bottom: 0.25rem;">Sub-3s Streaming</div>
+                            <div style="font-size: 0.85rem; color: var(--text-muted);">Real-time SSE token assembly directly on your iPhone</div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 2: Cooking Mode -->
+                    <div class="showcase-panel" id="panel-cooking" role="tabpanel" aria-labelledby="tab-cooking">
+                        <div>
+                            <span class="showcase-badge-pill">New in v1.3 HIG Physics</span>
+                            <h3>Tactile gestures engineered for messy hands.</h3>
+                            <p>
+                                Step through recipes effortlessly while holding spatulas or cooking with wet hands. Cards respond to your finger with rotational tilt, authentic rubber-band boundary resistance, and tactile haptic clicks when advancing steps.
+                            </p>
+                            <ul class="showcase-highlights">
+                                <li><span class="check">✓</span> Dynamic tilt physics proportional to drag displacement</li>
+                                <li><span class="check">✓</span> Light tactile haptics confirm every step transition</li>
+                                <li><span class="check">✓</span> Distraction-free full-screen layout with oversized controls</li>
+                            </ul>
+                        </div>
+                        <div class="showcase-visual">
+                            <div style="font-size: 3.5rem; margin-bottom: 0.5rem;">🍳</div>
+                            <div style="font-weight: 800; font-size: 1.15rem; margin-bottom: 0.25rem;">Direct Manipulation</div>
+                            <div style="font-size: 0.85rem; color: var(--text-muted);">True physical spring recovery and boundary damping</div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 3: Copilot -->
+                    <div class="showcase-panel" id="panel-copilot" role="tabpanel" aria-labelledby="tab-copilot">
+                        <div>
+                            <span class="showcase-badge-pill">Real-time Vision &amp; Voice</span>
+                            <h3>A digital sous-chef who can see your pan.</h3>
+                            <p>
+                                Questioning doneness? Snap a photo of your skillet and the Copilot evaluates sear, color, and texture. Ask about heat adjustments or substitutions by voice — all while keeping your hands free.
+                            </p>
+                            <ul class="showcase-highlights">
+                                <li><span class="check">✓</span> Recipe-aware context for precise step troubleshooting</li>
+                                <li><span class="check">✓</span> Mandatory food safety temperature warnings on meat doneness</li>
+                                <li><span class="check">✓</span> On-device Apple Speech Recognition for zero audio retention</li>
+                            </ul>
+                        </div>
+                        <div class="showcase-visual">
+                            <div style="font-size: 3.5rem; margin-bottom: 0.5rem;">🤖</div>
+                            <div style="font-weight: 800; font-size: 1.15rem; margin-bottom: 0.25rem;">Contextual Assistant</div>
+                            <div style="font-size: 0.85rem; color: var(--text-muted);">Understands current pan state and heat levels</div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 4: Planner -->
+                    <div class="showcase-panel" id="panel-planner" role="tabpanel" aria-labelledby="tab-planner">
+                        <div>
+                            <span class="showcase-badge-pill">3-Week Tri-Window Schedule</span>
+                            <h3>Plan meals across Last, This, and Next Week.</h3>
+                            <p>
+                                Never stare blankly into your fridge again. Map out breakfast, lunch, and dinner with fluid 3-week navigation. Copy recurring favorites from last week with a single tap, or batch-import from your local recipe library.
+                            </p>
+                            <ul class="showcase-highlights">
+                                <li><span class="check">✓</span> 1-tap "Copy from Last Week" saves time every Sunday</li>
+                                <li><span class="check">✓</span> Multi-select import directly from your offline library</li>
+                                <li><span class="check">✓</span> Automatic rolling cleanup for entries older than 14 days</li>
+                            </ul>
+                        </div>
+                        <div class="showcase-visual">
+                            <div style="font-size: 3.5rem; margin-bottom: 0.5rem;">📅</div>
+                            <div style="font-weight: 800; font-size: 1.15rem; margin-bottom: 0.25rem;">Tri-Week Calendar</div>
+                            <div style="font-size: 0.85rem; color: var(--text-muted);">Organized slots for Breakfast, Lunch, and Dinner</div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 5: Nutrition -->
+                    <div class="showcase-panel" id="panel-nutrition" role="tabpanel" aria-labelledby="tab-nutrition">
+                        <div>
+                            <span class="showcase-badge-pill">Responsible AI Nutrition</span>
+                            <h3>Visual macro estimates with safety-first transparency.</h3>
+                            <p>
+                                Review estimated weekly calories, protein, carbohydrate, and fat splits across your planned meals. Clear, non-medical disclosures ensure you make informed lifestyle choices responsibly.
+                            </p>
+                            <ul class="showcase-highlights">
+                                <li><span class="check">✓</span> Automated macro breakdowns per meal slot and day</li>
+                                <li><span class="check">✓</span> Prominent non-medical dietary disclaimer banners</li>
+                                <li><span class="check">✓</span> High-contrast accessible charts exceeding WCAG AAA standards</li>
+                            </ul>
+                        </div>
+                        <div class="showcase-visual">
+                            <div style="font-size: 3.5rem; margin-bottom: 0.5rem;">📊</div>
+                            <div style="font-weight: 800; font-size: 1.15rem; margin-bottom: 0.25rem;">Macro Dashboards</div>
+                            <div style="font-size: 0.85rem; color: var(--text-muted);">Balanced calories, protein, fat &amp; carbohydrates</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ FEATURES GRID ============ -->
+            <section id="features">
+                <div class="section-header">
+                    <span class="section-tag">Core Capabilities</span>
+                    <h2>Everything a modern home chef needs.</h2>
+                    <p class="section-desc">From fridge-to-table in seconds. Mealio seamlessly links discovery, execution, and nutrition planning in one fluid loop.</p>
+                </div>
+
+                <div class="features-grid">
+
+                    <!-- Featured card -->
+                    <div class="feature-card featured">
+                        <div class="feature-icon">📸</div>
+                        <h3>Snap &amp; Generate with Gemini 3.5 Flash</h3>
+                        <p>
+                            Select fridge or ingredient photos directly from your photo album, or simply describe your cravings.
+                            Gemini 3.5 Flash extracts items with confidence filtering and streams structured recipes in under 3 seconds —
+                            complete with prep, cook, and finish stages, heat cues, and food safety checkpoints. Even runs seamlessly in the background while you browse.
+                        </p>
+                        <span class="feature-tag">Multimodal AI · Sub-3s Stream</span>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Direct Manipulation Cooking Mode</h3>
+                        <p>Experience true direct manipulation in the kitchen. Interactive swipe gestures with live card tilt, boundary rubber-banding, and tactile haptic feedback make navigating steps effortless, even with messy hands.</p>
+                        <span class="feature-tag">New in v1.3 · Tactile Physics</span>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <h3>Multimodal AI Kitchen Copilot</h3>
+                        <p>Stuck mid-recipe? Ask anything by voice, text, or pan photos. The Copilot maintains full recipe context, suggests ingredient substitutions, and evaluates visual doneness with mandatory meat-thermometer safety cues.</p>
+                        <span class="feature-tag">Vision &amp; Voice QA</span>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🗓️</div>
+                        <h3>3-Week Smart Meal Planner</h3>
+                        <p>Organize breakfast, lunch, and dinner with fluid switching between Last Week, This Week, and Next Week. Copy a full week with one tap, clear schedules, or multi-select recipes directly from your local library.</p>
+                        <span class="feature-tag">Upgraded v1.3</span>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>AI Nutrition Insights Dashboard</h3>
+                        <p>Track weekly nutrition at a glance. Mealio estimates calories and macro splits (protein, carbohydrates, and fats) across scheduled meals, paired with clear non-medical health disclosures.</p>
+                        <span class="feature-tag">AI Insights Dashboard</span>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🎁</div>
+                        <h3>Fair Daily Quota &amp; Rewarded Unlocks</h3>
+                        <p>Enjoy 2 free recipe generations daily plus visual doneness checks per recipe. Need extra tokens? Watch optional Google AdMob rewarded videos to unlock more generations without recurring subscriptions.</p>
+                        <span class="feature-tag">v1.0.2 Feature · No Paywall</span>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h3>Private Local Recipe Library</h3>
+                        <p>Every generated culinary creation is stored directly in your on-device CoreData library. Organize with custom tags, search effortlessly, and cook anytime — 100% offline ready.</p>
+                        <span class="feature-tag">100% Offline Capable</span>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Zero-Account, Local-First Privacy</h3>
+                        <p>No registration, no accounts, and no tracking SDKs. System-level PhotosPicker operates out-of-process without permission dialogs on launch. Erase all local data anytime with one tap in Settings.</p>
+                        <span class="feature-tag">Privacy by Design</span>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ============ HOW IT WORKS ============ -->
+            <section id="how-it-works">
+                <div class="section-header">
+                    <span class="section-tag">Workflow</span>
+                    <h2>From craving to plate in 4 steps.</h2>
+                    <p class="section-desc">A cooking loop so smooth it feels natural, powered by structured AI intelligence and local-first data.</p>
+                </div>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-num">01</div>
+                        <span class="step-emoji">💬</span>
+                        <h3>Describe or Snap</h3>
+                        <p>Choose ingredients from your album or describe dietary preferences like low-sodium, keto, or quick-prep.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">02</div>
+                        <span class="step-emoji">✨</span>
+                        <h3>Gemini 3.5 Streams</h3>
+                        <p>Structured recipes arrive in under 3 seconds with background generation and robust schema parsing.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">03</div>
+                        <span class="step-emoji">🔥</span>
+                        <h3>Cook with Tactile Physics</h3>
+                        <p>Swipe through cooking steps with live card tilt and haptics. Consult the Copilot whenever you need a tip.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">04</div>
+                        <span class="step-emoji">📅</span>
+                        <h3>Plan Across 3 Weeks</h3>
+                        <p>Schedule your weekly menu across Last, This, and Next Week. Copy previous weeks with a single tap.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ SAFETY & PRIVACY ============ -->
+            <section id="safety">
+                <div class="section-header">
+                    <span class="section-tag">Safety &amp; Privacy</span>
+                    <h2>AI you can trust in the kitchen.</h2>
+                    <p class="section-desc">Mealio is engineered with Safety-by-Design: every AI response prioritizes food safety and user well-being over pleasing answers.</p>
+                </div>
+
+                <div class="safety-grid">
+                    <div class="safety-card">
+                        <div class="safety-icon">🌡️</div>
+                        <div>
+                            <h3>Doneness Safety Prompts</h3>
+                            <p>Recipes for poultry and pork always specify internal temperature checkpoints and doneness indicators. The AI never bypasses core food safety standards.</p>
+                        </div>
+                    </div>
+                    <div class="safety-card">
+                        <div class="safety-icon">📵</div>
+                        <div>
+                            <h3>Mandatory AI Disclaimers</h3>
+                            <p>Every visual doneness check provides a mandatory, non-dismissible safety reminder that AI vision cannot substitute for a calibrated food thermometer.</p>
+                        </div>
+                    </div>
+                    <div class="safety-card">
+                        <div class="safety-icon">🔒</div>
+                        <div>
+                            <h3>Local-First Data Storage</h3>
+                            <p>Your recipes and meal schedules are stored exclusively on your device via CoreData. Rebuildable image caches are excluded from iCloud backups to save space.</p>
+                        </div>
+                    </div>
+                    <div class="safety-card">
+                        <div class="safety-icon">🚫</div>
+                        <div>
+                            <h3>Explicit User Confirmation</h3>
+                            <p>The Copilot can suggest culinary modifications, but it will never silently modify your recipe steps or ingredients without your explicit confirmation.</p>
+                        </div>
+                    </div>
+                    <div class="safety-card">
+                        <div class="safety-icon">🩺</div>
+                        <div>
+                            <h3>Non-Medical Nutrition Approximations</h3>
+                            <p>Calorie and macronutrient estimates are clearly designated as informational approximations, not medical prescriptions. Mealio is a culinary companion.</p>
+                        </div>
+                    </div>
+                    <div class="safety-card">
+                        <div class="safety-icon">📷</div>
+                        <div>
+                            <h3>Out-of-Process Photo Privacy</h3>
+                            <p>Photo selection runs via Apple's out-of-process PhotosPicker. The app requires zero permission dialogs on launch and only accesses the photos you explicitly select.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ FAQ ACCORDION ============ -->
+            <section id="faq">
+                <div class="section-header">
+                    <span class="section-tag">Frequently Asked Questions</span>
+                    <h2>Got questions? We've got answers.</h2>
+                    <p class="section-desc">Everything you need to know about privacy, quotas, and cooking with Mealio.</p>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Is Mealio really free to use? Do I need a subscription?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Yes! Mealio is free to download on the Apple App Store. Every user receives a daily allowance of complimentary AI recipe generations and vision checks. If you need additional tokens on the same day, you can choose to watch an optional rewarded video — zero forced paywalls or recurring subscriptions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Do I need to register an account or provide my email?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                No. Mealio requires zero sign-up, zero email, and zero login. You can launch the app and start generating recipes immediately. All your saved meals and calendars are stored locally on your iPhone using Apple's CoreData framework.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How does Mealio protect my photo library privacy?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Mealio uses Apple's native, out-of-process <code>PhotosPicker</code> view service. The app never asks for permission to scan your entire photo library on launch. The application only accesses the specific image you deliberately tap and confirm for ingredient identification.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Does Mealio work offline without Wi-Fi in the kitchen?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Yes! All previously generated recipes in your personal library and all scheduled meals in your 3-week planner are saved on-device and function 100% offline. Only generating brand-new recipes from Gemini and streaming Copilot answers require an internet connection.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How accurate are the AI cooking doneness checks?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Gemini 3.5 Flash evaluates surface color, searing, and texture to provide culinary suggestions. However, because internal meat temperatures cannot be visually verified through cameras, Mealio enforces non-dismissible safety banners reminding cooks that meat thermometers are required for food safety on poultry and pork.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ DOWNLOAD / CTA ============ -->
+            <section id="download">
+                <div class="cta-card">
+                    <span class="section-tag">Available on iOS</span>
+                    <h2>Start cooking smarter<br><span class="highlight">today.</span></h2>
+                    <p>Mealio is free to download on the App Store. Generate your first AI recipe in under 60 seconds.</p>
+                    <div class="cta-btns">
+                        <a href="https://apps.apple.com/app/mealio/id6777829320" target="_blank" rel="noopener" class="btn-primary" id="cta-app-store-btn">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor" aria-hidden="true">
+                                <path d="M16.1 1a5.1 5.1 0 0 1-1.2 3.5A4 4 0 0 1 11.7 6a4.6 4.6 0 0 1 1.2-3.4A4.9 4.9 0 0 1 16.1 1zm3.5 12.2c-.1.2-1.6 5.5-5.3 5.5a3.2 3.2 0 0 1-2-.7 3.5 3.5 0 0 0-2-.7 3.7 3.7 0 0 0-2.1.7 3 3 0 0 1-2 .7c-3.4 0-5-4.9-5-7.4a6.3 6.3 0 0 1 5.5-6.9 4 4 0 0 1 2.3.8 3.7 3.7 0 0 0 1.9.7 3.3 3.3 0 0 0 1.8-.7 4.3 4.3 0 0 1 2.3-.7 6 6 0 0 1 4.7 2.5A5.4 5.4 0 0 0 19.6 13.2z"/>
+                            </svg>
+                            Download on App Store
+                        </a>
+                        <a href="mailto:fangdev1063@gmail.com" class="btn-secondary" id="cta-contact-btn">Contact Support</a>
+                    </div>
+
+                    <!-- Desktop QR Code Download Companion -->
+                    <div class="qr-download-container" aria-label="Scan QR Code to install Mealio on iPhone">
+                        <img src="assets/appstore-qr.png" alt="Scan QR code with your iPhone camera to download Mealio" width="80" height="80" loading="lazy">
+                        <div class="qr-download-text">
+                            <span class="qr-download-title">📱 Scan with iPhone Camera</span>
+                            <span class="qr-download-desc">Point your camera to instantly open Mealio on the App Store</span>
+                        </div>
+                    </div>
+
+                    <p class="cta-note">Requires iOS 17.0 or later · Designed for iPhone · Free to download with daily fair-use quota</p>
+                </div>
+            </section>
+        </main>
 
         <!-- ============ FOOTER ============ -->
         <footer>
             <div class="footer-inner">
                 <a href="index.html" class="footer-logo">
-                    <img src="assets/icon.png" alt="DishPilot">
-                    <span>DishPilot</span>
+                    <img src="assets/icon.png" alt="Mealio" width="32" height="32">
+                    <span>Mealio</span>
                 </a>
                 <ul class="footer-links">
                     <li><a href="#features">Features</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                     <li><a href="privacy.html">Privacy Policy</a></li>
                     <li><a href="terms.html">Terms of Use</a></li>
                     <li><a href="mailto:fangdev1063@gmail.com">Support</a></li>
                 </ul>
-                <p class="footer-copy">© 2026 DishPilot. All rights reserved.</p>
+                <p class="footer-copy">© 2026 Mealio. All rights reserved.</p>
             </div>
         </footer>
 
     </div><!-- /container -->
 
     <script>
+        // Interactive Showcase Tab Switching
+        const tabs = document.querySelectorAll('.showcase-tab');
+        const panels = document.querySelectorAll('.showcase-panel');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const targetPanelId = tab.getAttribute('aria-controls');
+                
+                tabs.forEach(t => {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-selected', 'false');
+                });
+                panels.forEach(p => p.classList.remove('active'));
+
+                tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
+                const targetPanel = document.getElementById(targetPanelId);
+                if (targetPanel) {
+                    targetPanel.classList.add('active');
+                }
+            });
+        });
+
+        // FAQ Accordion Toggle
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const btn = item.querySelector('.faq-question');
+            btn.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                faqItems.forEach(i => {
+                    i.classList.remove('open');
+                    i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+                if (!isOpen) {
+                    item.classList.add('open');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
         // Animate on scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -278,7 +640,7 @@
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.feature-card, .step-card, .safety-card').forEach(el => {
+        document.querySelectorAll('.feature-card, .step-card, .safety-card, .showcase-content-wrapper, .faq-item').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
